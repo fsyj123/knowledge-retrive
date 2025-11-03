@@ -144,7 +144,7 @@ def build_app() -> Starlette:
 
 def main() -> None:
     host = os.getenv("HOST", "0.0.0.0")
-    port = int(os.getenv("PORT", "3001"))
+    port = int(os.getenv("PORT", "3000"))
     uvicorn.run(build_app(), host=host, port=port, log_level="info")
 
 

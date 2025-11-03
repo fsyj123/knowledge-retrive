@@ -1,6 +1,6 @@
 [project]
-name = "mcp-knowledge-tools"
-version = "0.1.0"
+name = "mcp-knowledge-server"
+version = "0.1.1"
 description = "MCP server exposing internal knowledge retrieval tools."
 authors = [{name = "Generated", email = "generated@example.com"}]
 readme = "README.md"

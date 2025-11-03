@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
-Name: mcp-knowledge-tools
-Version: 0.1.0
+Name: mcp-knowledge-server
+Version: 0.1.1
 Summary: MCP server exposing internal knowledge retrieval tools.
 Author-email: Generated <generated@example.com>
 Requires-Python: >=3.10
