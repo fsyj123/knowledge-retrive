@@ -1,0 +1,7 @@
+mcp[cli]>=1.2.0
+httpx>=0.26
+beautifulsoup4>=4.12
+lxml>=5.0
+starlette>=0.37
+uvicorn>=0.29
+pydantic>=2.7

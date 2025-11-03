@@ -1,3 +1,18 @@
+Metadata-Version: 2.4
+Name: mcp-knowledge-tools
+Version: 0.1.0
+Summary: MCP server exposing internal knowledge retrieval tools.
+Author-email: Generated <generated@example.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.2.0
+Requires-Dist: httpx>=0.26
+Requires-Dist: beautifulsoup4>=4.12
+Requires-Dist: lxml>=5.0
+Requires-Dist: starlette>=0.37
+Requires-Dist: uvicorn>=0.29
+Requires-Dist: pydantic>=2.7
+
 # MCP Knowledge Tools
 
 This repository implements a Model Context Protocol (MCP) server that exposes three
@@ -70,7 +85,7 @@ mcp-knowledge-server
 Alternatively you can run the module directly:
 
 ```
-uv run mcp-knowledge-server
+python -m mcp_knowledge_tools.server
 ```
 
 The server uses `FastMCP` from the Model Context Protocol reference

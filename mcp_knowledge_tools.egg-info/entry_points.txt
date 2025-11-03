@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-knowledge-server = mcp_knowledge_tools.server:main
