@@ -32,7 +32,25 @@ export DIFY_DATASET_TOKEN="dataset-..."
 
 ## Installation
 
+
+The project is published as a standard Python package and can be installed with
+your preferred Python packaging tool.
+
+### Using `uv`
+
+[`uv`](https://docs.astral.sh/uv/) offers fast Python environment management and
+package installation.
+
+```
+uv venv
+source .venv/bin/activate
+uv pip install .
+```
+
+### Using `pip`
+
 The project is published as a standard Python package.
+
 
 ```
 python -m venv .venv
