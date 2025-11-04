@@ -1,23 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "mcp-knowledge-server"
-version = "0.1.1"
+version = "0.1.4"
 description = "MCP server exposing internal knowledge retrieval tools."
-authors = [{name = "Generated", email = "generated@example.com"}]
 readme = "README.md"
+license = "MIT"
 requires-python = ">=3.10"
+authors = [{name = "Generated", email = "generated@example.com"}]
+keywords = ["mcp", "model context protocol", "knowledge", "retrieval", "dify"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License"
+]
 dependencies = [
-  "mcp[cli]>=1.2.0",
+  "build>=1.2.2.post1",
+  "mcp[cli]>=1.9.2",
+  "twine>=6.1.0",
   "httpx>=0.26",
   "beautifulsoup4>=4.12",
   "lxml>=5.0",
-  "starlette>=0.37",
-  "uvicorn>=0.29",
-  "pydantic>=2.7"
+  # "starlette>=0.37",
+  # "uvicorn>=0.29",
+  "pydantic",
 ]
 
 [project.scripts]
-mcp-knowledge-server = "mcp_knowledge_tools.server:main"
+mcp-knowledge-server = "mcp_knowledge_server.server:main"
 
-[build-system]
-requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.build_meta"
+# 建议显式指定要打进 wheel 的包目录（非 src/ 布局时更稳）
+[tool.hatch.build.targets.wheel]
+packages = ["mcp_knowledge_server"]
+
+[tool.hatch.build.targets.sdist]
+include = ["mcp_knowledge_server", "README.md"]
